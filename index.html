@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valenbici Live Map - Dark Mode</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        header {
+            background: #222;
+            color: #00d8ff;
+            padding: 12px 20px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #map {
+            height: calc(100vh - 55px);
+            width: 100%;
+        }
+
+        #sidebar {
+            position: absolute;
+            top: 60px;
+            left: 10px;
+            background: #222;
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        button {
+            padding: 8px 12px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 6px;
+            background: #00d8ff;
+            color: #111;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #00a3cc;
+        }
+
+        .leaflet-popup-content {
+            font-size: 14px;
+            color: #111;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    🚲 Valenbici — Dark Map
+</header>
+
+<div id="sidebar">
+    <button id="filter-bikes">Solo estaciones con bicis</button>
+    <button id="filter-empty">Solo estaciones vacías</button>
+    <button id="filter-all">Mostrar todas</button>
+</div>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
